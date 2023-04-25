@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalChecked - Add</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        /* Shared styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .progress {
+            height: 1rem;
+            margin-bottom: 1rem;
+        }
+        .progress-bar {
+            background-color: #007BFF;
+        }
+        .percentage {
+            margin-left: 1rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #007BFF;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+
+        /* Add Buttons */
+        #add-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 120px);
+        }
+        .add-button {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            margin: 0 2rem;
+            text-decoration: none;
+            color: #000;
+            transition: all 0.2s ease-in-out;
+        }
+        .add-button:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+        .add-button .icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="#">Home</a>
+        </div>
+        <div>
+            <a href="#">Add</a>
+            <a href="#">Profile</a>
+        </div>
+    </nav>
+    <div class="container">
+        <section id="add-buttons">
+            <a href="#" class="add-button">
+                <i class="bi bi-check-circle icon"></i>
+                Add a small task
+            </a>
+            <a href="#" class="add-button">
+                <i class="bi bi-calendar-plus icon"></i>
+                Add a long term goal
+            </a>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalChecked - Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        /* Shared styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .progress {
+            height: 1rem;
+            margin-bottom: 1rem;
+        }
+        .progress-bar {
+            background-color: #007BFF;
+        }
+        .percentage {
+            margin-left: 1rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #007BFF;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+
+        /* Things to Do */
+        #todo {
+            margin-bottom: 2rem;
+        }
+        #todo h2 {
+            margin-bottom: 1rem;
+        }
+        #todo ul li {
+            padding-left: 1.5rem;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #todo ul li:hover {
+            background-color: #f0f0f0;
+        } 
+
+        /* Long Term Goal */
+        #long-term {
+            margin-bottom: 2rem;
+        }
+        #long-term h2 {
+            margin-bottom: 1rem;
+        }
+        #long-term .percentage {
+            margin-left: auto;
+        }
+        .goal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .goal-name {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <i class="bi bi-list"></i>
+            <a href="#">Home</a>
+        </div>
+        <div>
+            <a href="#">Add</a>
+            <a href="#">Profile</a>
+        </div>
+    </nav>
+    <div class="container">
+        <section id="todo">
+            <h2>Things to Do</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" class="checkbox">
+                    Walking 10 mins
+                </li>
+                <li>
+                    <input type="checkbox" class="checkbox">
+                    Create a project 5
+                </li>
+                <li>
+                    <input type="checkbox" class="checkbox">
+                    Meeting
+                </li>
+                <li>
+                    <input type="checkbox" class="checkbox">
+                    Buy some pens
+                </li>
+            </ul>
+            <button>Add New Task</button>
+        </section>
+        <section id="long-term">
+            <h2>Long Term Goal</h2>
+            <div class="goal">
+                <div class="goal-name">Go to Gym</div>
+                <div class="progress" style="width: 200px;">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="percentage">50%</div>
+            </div>
+            <div class="goal">
+                <div class="goal-name">Reading</div>
+                <div class="progress" style="width: 200px;">
+                    <div class="progress-bar" role="progressbar" style="width: 18%;" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="percentage">18%</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

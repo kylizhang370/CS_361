@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Goal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #007BFF;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .box {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            background-color: #f8f8f8;
+        }
+        input, select, button {
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+        label {
+            display: block;
+            margin: 1rem 0;
+        }
+        button {
+            background-color: #007BFF;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            margin-top: 1rem;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function showPopup(event) {
+            event.preventDefault();
+            const dontShowAgain = document.getElementById("dont-show-again");
+            if (dontShowAgain.checked) {
+                // Save the preference to not show the pop-up again
+                localStorage.setItem("disableGoalPopup", "true");
+            } else {
+                localStorage.removeItem("disableGoalPopup");
+            }
+
+            if (localStorage.getItem("disableGoalPopup") !== "true") {
+                alert("You are submitting a new goal.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="#">Home</a>
+        </div>
+        <div>
+            <a href="#">Add</a>
+            <a href="#">Profile</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Edit Goal</h1>
+        <form onsubmit="showPopup(event)">
+            <div class="box">
+                <label for="goal">Goal:</label>
+                <input type="text" id="goal" name="goal" required>
+
+                <label for="start">Start Time:</label>
+                <input type="time" id="start" name="start" required>
+
+                <label for="end">End Time:</label>
+                <input type="time" id="end" name="end" required>
+
+                <label for="start_day">Day to Start:</label>
+                <input type="date" id="start_day" name="start_day" required>
+
+                <label for="end_day">Day to End:</label>
+                <input type="date" id="end_day" name="end_day" required>
+
+                <label for="dont-show-again">
+                    <input type="checkbox" id="dont-show-again" name="dont_show_again">
+                    Don't show this pop-up again
+                </label>
+
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
