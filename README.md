@@ -8,6 +8,7 @@ git push -u origin main
 
 
 //git hub
+
 A. The video is showing how I am going to REQUEST DATA, since it is not yet the final version, so the way I REQUEST data is by adding goal, and the goal will add to the database, what I am using for now is mySQL and I set up the database locally. When the data is submited then the home.html will automatically REQUEST DATA and print it on the website. 
 
 B. Receive data is pretty much the same and it is done by the code automatically. Below are the process of the functions that I implemented so far.
