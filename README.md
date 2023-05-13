@@ -35,3 +35,14 @@ CREATE TABLE goals (
     goal VARCHAR(255) NOT NULL,
     start_day DATE NOT NULL
 );
+
+
+The name of my own database is: my_database. If you want to run my code locally then the code would be:
+CREATE DATABASE my_database;
+USE my_database;
+
+CREATE TABLE goals (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    goal VARCHAR(255) NOT NULL,
+    start_day DATE NOT NULL
+);
