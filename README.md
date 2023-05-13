@@ -20,3 +20,18 @@ The client receives the data and displays it on an HTML page using JavaScript.
 
 C. Below are the linked to the UML sequence diagram:
 https://lucid.app/lucidchart/18ab2891-e5c7-46e2-9f7e-899d07af4215/edit?viewport_loc=-123%2C-4%2C1658%2C956%2C0_0&invitationId=inv_d407a495-f287-4019-900d-76c4392d8615
+
+
+
+About the microservives, I am using node.js and mySQL to bulid up my database and having them runing in locally machine. 
+
+Here is the code for my database:
+
+CREATE DATABASE your_database;
+USE your_database;
+
+CREATE TABLE goals (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    goal VARCHAR(255) NOT NULL,
+    start_day DATE NOT NULL
+);
