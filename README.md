@@ -47,5 +47,3 @@ CREATE TABLE goals (
     start_day DATE NOT NULL
 );
 
-<img width="746" alt="image" src="https://github.com/kylizhang370/CS_361/assets/48518623/938f91d9-7bcf-4416-bf1c-0bf4f904830c">
-
