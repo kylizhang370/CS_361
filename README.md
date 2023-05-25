@@ -46,5 +46,13 @@ CREATE TABLE goals (
 C. Below are the linked to the UML sequence diagram:
 https://lucid.app/lucidchart/18ab2891-e5c7-46e2-9f7e-899d07af4215/edit?viewport_loc=-123%2C-4%2C1658%2C956%2C0_0&invitationId=inv_d407a495-f287-4019-900d-76c4392d8615
 
-<img width="803" alt="image" src="https://github.com/kylizhang370/CS_361/assets/48518623/b8eb9bec-7e12-445e-b2bb-056f45c466e5">
+
+
+
+
+Revise part:
+User request data by using GET, POST, PUT, or DELETE to request data from the database. Because I am using node.js so the server I bulid up is using that language which might be a bit rough to use. There is a file call server.js and I am using that to run my mircoservies and use this file to link to my mysql database. There are some existing CURD ways to provide partners to connect and adapt their software. For example that they can use the app.get('/api/goals', (req, res) function to call and display the data they want to see.
+
+<img width="679" alt="image" src="https://github.com/kylizhang370/CS_361/assets/48518623/ddfb616e-ffa1-41f6-8b63-54300eef54fd">
+
 
