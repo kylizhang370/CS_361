@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalChecked - Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 75%);
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        input, button {
+            font-size: 1rem;
+            padding: 0.5rem;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        a {
+            display: block;
+            text-align: center;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: #007BFF;
+            margin-bottom: 1rem;
+        }
+        .separator {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
+        .separator span {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #ccc;
+        }
+        .separator p {
+            margin: 0 1rem;
+            color: #999;
+            font-size: 0.8rem;
+        }
+        .third-party {
+            display: flex;
+            justify-content: space-between;
+        }
+        .third-party button {
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32%;
+            height: 2.5rem;
+        }
+        .signup {
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            const passwordInput = document.getElementById('password');
+            if (passwordInput.value !== 'correct_password') {
+                alert('Password is incorrect');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>GoalChecked</h1>
+        <input type="email" id="email" placeholder="123456789@gmail.com" />
+        <input type="password" id="password" placeholder="***************" />
+        <a href="#">Forgot password?</a>
+        <button onclick="checkPassword()">Login</button>
+        <div class="separator">
+            <span></span>
+            <p>or</p>
+            <span></span>
+        </div>
+        <div class="third-party">
+            <button><i class="bi bi-google"></i></button>
+            <button><i class="bi bi-facebook"></i></button>
+            <button><i class="bi bi-twitter"></i></button>
+        </div>
+        <p class="signup">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+</body>
+</html>

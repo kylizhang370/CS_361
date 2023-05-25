@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Goal</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        async function submitGoal(event) {
+            event.preventDefault();
+        
+            const goalInput = document.getElementById('goal');
+            const startDayInput = document.getElementById('start_day');
+        
+            const goalData = {
+                goal: goalInput.value,
+                start_day: startDayInput.value,
+            };
+        
+            try {
+                await fetch('http://localhost:3000/api/goals', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(goalData),
+                });
+        
+                alert('Goal submitted successfully');
+                goalInput.value = '';
+                startDayInput.value = '';
+            } catch (error) {
+                console.error('Error submitting goal:', error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="/home.html">Home</a>
+        </div>
+        <div>
+            <a href="/add_goal.html">Add</a>
+            <a href="/profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Add Goal</h1>
+        <form onsubmit="submitGoal(event)">
+            <div class="box">
+                <label for="goal">Goal:</label>
+                <input type="text" id="goal" name="goal" required>
+
+                <label for="start_day">Day to Start:</label>
+                <input type="date" id="start_day" name="start_day" required>
+
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
