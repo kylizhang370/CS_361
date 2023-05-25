@@ -55,6 +55,8 @@ Revise part:
 
 User request data by using GET, POST, PUT, or DELETE to request data from the database. Because I am using node.js so the server I bulid up is using that language which might be a bit rough to use. There is a file call server.js and I am using that to run my mircoservies and use this file to link to my mysql database. There are some existing CURD ways to provide partners to connect and adapt their software. For example that they can use the app.get('/api/goals', (req, res) function to call and display the data they want to see.
 
+Basically, it is that when we hit the button in the html page, then it will call to the JavaScript function, and the JS functions in html will call the functions in the server.js and it will send  CURD, which are GET, POST, PUT, or DELETE request to interact with local mySQL database. Then the database will transmit the data we called in the form of json, and then the first function in html will receive the data and render them to the screen. My partner droped this class alrealy, so I don't know how he implement his app, but there are some built function in the server.js for us to use. 
+
 <img width="679" alt="image" src="https://github.com/kylizhang370/CS_361/assets/48518623/ddfb616e-ffa1-41f6-8b63-54300eef54fd">
 
 
