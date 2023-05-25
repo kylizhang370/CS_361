@@ -51,6 +51,8 @@ https://lucid.app/lucidchart/18ab2891-e5c7-46e2-9f7e-899d07af4215/edit?viewport_
 
 
 Revise part:
+
+
 User request data by using GET, POST, PUT, or DELETE to request data from the database. Because I am using node.js so the server I bulid up is using that language which might be a bit rough to use. There is a file call server.js and I am using that to run my mircoservies and use this file to link to my mysql database. There are some existing CURD ways to provide partners to connect and adapt their software. For example that they can use the app.get('/api/goals', (req, res) function to call and display the data they want to see.
 
 <img width="679" alt="image" src="https://github.com/kylizhang370/CS_361/assets/48518623/ddfb616e-ffa1-41f6-8b63-54300eef54fd">
